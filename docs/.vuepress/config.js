@@ -1,9 +1,12 @@
 module.exports = {
+    dest: './dist',
+    port: 2233,
     themeConfig: {
         // 博客的 logo
         displayAllHeaders: false,
         logo: 'https://cdn.yuque.com/yuque/0/2018/jpeg/92616/1526287107537-assets/web-upload/27f0ab12-d94f-455f-af72-a109565ef2cd.jpeg?x-oss-process=image/resize,w_440',
         // 添加导航栏
+        // 要部署的仓库名字
         nav: [{
                 text: '首页',
                 link: '/'
@@ -34,16 +37,14 @@ module.exports = {
             }
         ],
         sidebar: {
-            '/home/': [
-                {
-                    title: '前端',
-                    collapsable: false,
-                    children: [
-                        '/home/',
-                        '/home/home',
-                    ]
-                },
-            ],
+            '/home/': [{
+                title: '前端',
+                collapsable: false,
+                children: [
+                    '/home/',
+                    '/home/home',
+                ]
+            }, ],
         }
     }
 }
